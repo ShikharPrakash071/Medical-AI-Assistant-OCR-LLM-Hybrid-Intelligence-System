@@ -2,21 +2,20 @@ from backend.services.normalizer import normalize_input
 from backend.services.intent_detector import detect_intent, Intent
 from backend.services.medical_db import get_symptoms, get_medicines, format_context
 from backend.services.page_index import search
-from openai import AsyncOpenAI
+from groq import AsyncGroq
 import os
 
-client = AsyncOpenAI(api_key=os.getenv("OPENAI_API_KEY"))
+client = AsyncGroq(api_key=os.getenv("GROQ_API_KEY"))
 
 
-# ✅ Fix 1: mutable default argument fix — list ki jagah None
 async def process(user_message, conversation_history=None):
     if conversation_history is None:
         conversation_history = []
 
-    # Layer 1 — Normalize
+    # Layer 1 - Normalize
     norm = await normalize_input(user_message)
 
-    # Layer 2 — Intent
+    # Layer 2 - Intent
     intent = detect_intent(norm)
 
     symptoms = norm.get("normalized_symptoms", [])
@@ -24,14 +23,12 @@ async def process(user_message, conversation_history=None):
 
     context = ""
 
-    # Layer 3 — Retrieval
-    # ✅ Fix 2: MIXED intent handle kiya
+    # Layer 3 - Retrieval
     if intent == Intent.DOCUMENT_QUERY:
         docs = search(norm.get("document_keywords", []))
         context = "\n".join(docs)
 
     elif intent == Intent.MIXED:
-        # Dono — medical DB + PageIndex dono se search
         sym_data = get_symptoms(symptoms)
         med_data = get_medicines(meds)
         docs = search(symptoms + meds)
@@ -43,27 +40,43 @@ async def process(user_message, conversation_history=None):
         med_data = get_medicines(meds)
         context = format_context(sym_data, med_data)
 
-    # Layer 4 — Response
+    # Layer 4 - Response
     system_prompt = f"""
-You are a helpful medical assistant.
-Respond in the same language the user used (Hinglish/Hindi/English).
-Be simple, warm, and clear. Never diagnose definitively.
-Always recommend a doctor for serious issues.
+You are a warm, helpful medical assistant for Indian users.
+Reply in the EXACT same language the user used - Hinglish, Hindi, or English.
 
-Context from knowledge base:
+FOLLOW THIS STRUCTURE IN EVERY RESPONSE:
+
+1. ACKNOWLEDGE - User ke symptoms ko warmly acknowledge karo (1-2 lines)
+
+2. HOME REMEDIES - Knowledge base se home remedies batao (2-3 points)
+
+3. MEDICINES - Yeh section MANDATORY hai, kabhi skip mat karo:
+   - Generic medicine ka naam batao
+   - Indian brand name batao (jaise Crocin, Dolo 650, Brufen)
+   - Short dosage batao
+   - - Sabhi medicines list karne ke BAAD, sirf EK BAAR likho: "doctor se confirm zaroor karein"
+
+4. DOCTOR KAB MILEIN - Knowledge base se when_to_see_doctor info batao
+
+5. FOLLOW-UP - Ek follow-up question pucho
+
+STRICT RULES:
+- Medicines HAMESHA suggest karo - yeh bot ka main purpose hai
+- Diagnose KABHI mat karo
+- Knowledge base mein jo data hai wahi use karo
+- User ki language mein hi jawab do - English user ko English mein, Hinglish user ko Hinglish mein
+
+Knowledge Base:
 {context}
 """
 
-    # ✅ Fix 3: conversation_history ab actually use ho raha hai
     messages = [{"role": "system", "content": system_prompt}]
-
-    # last 6 messages — 3 turns (user + assistant)
     messages.extend(conversation_history[-6:])
-
     messages.append({"role": "user", "content": user_message})
 
     res = await client.chat.completions.create(
-        model="gpt-4o-mini",
+        model="llama-3.3-70b-versatile",
         messages=messages,
         temperature=0.4,
         max_tokens=800

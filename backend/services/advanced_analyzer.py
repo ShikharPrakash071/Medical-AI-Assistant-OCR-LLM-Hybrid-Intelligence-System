@@ -2,14 +2,14 @@
 from backend.config import USE_VISION
 import backend.config as config   # for runtime update
 
-# -------- ENV + OPENAI --------
+# -------- ENV + GROQ --------
 import os
 from dotenv import load_dotenv
-from openai import OpenAI
+from groq import AsyncGroq
 
 load_dotenv()
 
-client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
+client = AsyncGroq(api_key=os.getenv("GROQ_API_KEY"))
 
 # -------- LIBRARIES --------
 import pytesseract
@@ -88,7 +88,7 @@ def vision_analysis(image_path):
         img = base64.b64encode(f.read()).decode()
 
     response = client.chat.completions.create(
-        model="gpt-4o-mini",
+        model="llama-3.3-70b-versatile",
         messages=[
             {
                 "role": "user",
@@ -111,7 +111,7 @@ def safe_vision_analysis(file_path):
     except Exception as e:
         error_msg = str(e)
 
-        # 🔴 Auto disable if quota खत्म
+        # Auto disable if quota खत्म
         if "quota" in error_msg or "429" in error_msg:
             config.USE_VISION = False
             print("⚠️ Vision disabled due to quota limit")
@@ -142,7 +142,7 @@ def analyze_document_advanced(file_path):
 
     vision_output = None
 
-    # 🔵 Use vision only if enabled
+    #  Use vision only if enabled
     if USE_VISION:
         vision_output = safe_vision_analysis(file_path)
 

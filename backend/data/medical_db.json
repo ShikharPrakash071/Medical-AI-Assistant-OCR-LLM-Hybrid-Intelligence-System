@@ -1,0 +1,327 @@
+{
+  "symptoms": {
+    "fever": {
+      "description": "Elevated body temperature, usually above 38°C (100.4°F). A sign the body is fighting infection.",
+      "common_causes": ["viral infection", "bacterial infection", "flu", "COVID-19", "dengue", "typhoid"],
+      "when_to_see_doctor": "If fever exceeds 103°F (39.4°C), lasts more than 3 days, or is accompanied by rash, stiff neck, or difficulty breathing.",
+      "home_remedies": ["stay hydrated", "rest", "cold compress on forehead", "paracetamol as directed"],
+      "generic_medicines": [
+        {"name": "Paracetamol (Acetaminophen)", "brands": ["Crocin", "Dolo 650", "Calpol"], "note": "First choice for fever. Safe for adults and children."},
+        {"name": "Ibuprofen", "brands": ["Brufen", "Combiflam", "Advil"], "note": "Reduces fever and inflammation. Take with food."},
+        {"name": "Aspirin", "brands": ["Disprin", "Ecosprin"], "note": "Adults only. Do NOT give to children under 16."}
+      ]
+    },
+    "headache": {
+      "description": "Pain or discomfort in the head or neck region. Can be tension-type, migraine, or secondary to another condition.",
+      "common_causes": ["stress", "dehydration", "eye strain", "migraine", "sinusitis", "fever"],
+      "when_to_see_doctor": "Sudden severe headache, headache with fever and stiff neck, or headaches worsening over time.",
+      "home_remedies": ["rest in a dark quiet room", "hydration", "cold or warm compress", "over-the-counter pain reliever"],
+      "generic_medicines": [
+        {"name": "Paracetamol (Acetaminophen)", "brands": ["Crocin", "Dolo 650", "Calpol"], "note": "Best first choice for tension headache."},
+        {"name": "Ibuprofen", "brands": ["Brufen", "Combiflam"], "note": "Good for headache with inflammation. Take with food."},
+        {"name": "Aspirin", "brands": ["Disprin", "Ecosprin"], "note": "Adults only. Effective for mild to moderate headache."}
+      ]
+    },
+    "cough": {
+      "description": "Reflex action to clear the airways of mucus, irritants, or foreign particles.",
+      "common_causes": ["common cold", "flu", "asthma", "GERD", "allergies", "COVID-19", "tuberculosis"],
+      "when_to_see_doctor": "Cough lasting more than 3 weeks, coughing blood, or cough with high fever and shortness of breath.",
+      "home_remedies": ["honey and warm water", "steam inhalation", "ginger tea", "stay hydrated"],
+      "generic_medicines": [
+        {"name": "Dextromethorphan", "brands": ["Benylin", "Robitussin DM", "Alex"], "note": "Dry cough suppressant. Do not use for productive cough."},
+        {"name": "Guaifenesin", "brands": ["Mucinex", "Grilinctus"], "note": "Expectorant — loosens mucus. Drink plenty of water."},
+        {"name": "Ambroxol", "brands": ["Ambrodil", "Mucosolvan", "Ambrolite"], "note": "Helps clear mucus from chest. Good for wet cough."},
+        {"name": "Levosalbutamol + Ambroxol", "brands": ["Ascoril LS", "Ambrodil LS"], "note": "Combination syrup for cough with chest tightness."}
+      ]
+    },
+    "sore throat": {
+      "description": "Pain, scratchiness, or irritation of the throat that often worsens when swallowing.",
+      "common_causes": ["viral infection", "strep throat", "allergies", "dry air", "acid reflux"],
+      "when_to_see_doctor": "Severe throat pain, difficulty swallowing or breathing, high fever, or symptoms lasting more than a week.",
+      "home_remedies": ["warm salt water gargle", "honey and warm water", "throat lozenges", "rest your voice"],
+      "generic_medicines": [
+        {"name": "Paracetamol", "brands": ["Crocin", "Dolo 650"], "note": "Relieves throat pain and associated fever."},
+        {"name": "Ibuprofen", "brands": ["Brufen", "Combiflam"], "note": "Reduces inflammation and pain in throat."},
+        {"name": "Benzocaine lozenges", "brands": ["Strepsils", "Vicks"], "note": "Local anesthetic — numbs throat pain temporarily."},
+        {"name": "Chlorhexidine gargle", "brands": ["Hexidine", "Clohex"], "note": "Antibacterial gargle for throat infection."}
+      ]
+    },
+    "stomach pain": {
+      "description": "Pain or discomfort in the abdominal area. Causes vary widely from mild gas to serious conditions.",
+      "common_causes": ["indigestion", "gas", "food poisoning", "gastritis", "appendicitis", "IBS"],
+      "when_to_see_doctor": "Severe sudden pain, pain with fever and vomiting, blood in stool, or pain lasting more than a few hours.",
+      "home_remedies": ["ginger tea", "hot water bottle on abdomen", "avoid spicy or fatty foods", "eat small meals"],
+      "generic_medicines": [
+        {"name": "Antacid (Aluminum + Magnesium hydroxide)", "brands": ["Digene", "Gelusil", "Eno"], "note": "For acidity and indigestion related stomach pain."},
+        {"name": "Domperidone", "brands": ["Domstal", "Motilium", "Vomistop"], "note": "Reduces nausea and stomach cramping."},
+        {"name": "Dicyclomine", "brands": ["Cyclopam", "Meftal Spas"], "note": "Antispasmodic — relieves stomach cramps and spasms."},
+        {"name": "Pantoprazole", "brands": ["Pan 40", "Pantocid"], "note": "For gastritis and acid-related stomach pain."}
+      ]
+    },
+    "nausea": {
+      "description": "Sensation of unease in the stomach with an urge to vomit.",
+      "common_causes": ["food poisoning", "motion sickness", "pregnancy", "medication side effects", "migraine"],
+      "when_to_see_doctor": "If nausea is persistent, accompanied by severe vomiting, chest pain, or signs of dehydration.",
+      "home_remedies": ["ginger tea", "small sips of water", "bland foods like rice and toast", "fresh air", "rest"],
+      "generic_medicines": [
+        {"name": "Domperidone", "brands": ["Domstal", "Vomistop", "Motilium"], "note": "Most common anti-nausea medicine in India."},
+        {"name": "Ondansetron", "brands": ["Emeset", "Zofer", "Ondem"], "note": "Stronger anti-nausea — used for severe nausea."},
+        {"name": "Metoclopramide", "brands": ["Perinorm", "Reglan"], "note": "Helps stomach empty faster — reduces nausea."},
+        {"name": "Dimenhydrinate", "brands": ["Dramamine", "Gravol"], "note": "For motion sickness related nausea."}
+      ]
+    },
+    "diarrhea": {
+      "description": "Loose, watery stools occurring more than 3 times a day.",
+      "common_causes": ["food poisoning", "viral gastroenteritis", "bacterial infection", "medications", "IBS"],
+      "when_to_see_doctor": "Lasts more than 2 days, signs of dehydration, blood in stool, or high fever.",
+      "home_remedies": ["ORS oral rehydration solution", "BRAT diet banana rice applesauce toast", "avoid dairy and fatty foods"],
+      "generic_medicines": [
+        {"name": "ORS (Oral Rehydration Salts)", "brands": ["Electral", "ORS Sachet", "Pedialyte"], "note": "MOST IMPORTANT — prevents dehydration. Start immediately."},
+        {"name": "Loperamide", "brands": ["Lopamide", "Imodium", "Eldoper"], "note": "Slows down bowel movement. Do not use if fever or blood in stool."},
+        {"name": "Zinc Sulfate", "brands": ["Zincovit", "Zinconia"], "note": "Recommended with ORS especially for children — shortens duration."},
+        {"name": "Metronidazole", "brands": ["Flagyl", "Metrogyl"], "note": "If bacterial infection suspected — requires doctor advice."}
+      ]
+    },
+    "fatigue": {
+      "description": "Extreme tiredness or exhaustion that does not improve with rest.",
+      "common_causes": ["poor sleep", "anemia", "thyroid issues", "diabetes", "depression", "viral illness"],
+      "when_to_see_doctor": "Fatigue lasting more than 2 weeks, with unexplained weight loss, or affecting daily activities.",
+      "home_remedies": ["improve sleep routine", "stay hydrated", "light exercise", "balanced diet", "reduce stress"],
+      "generic_medicines": [
+        {"name": "Iron + Folic Acid", "brands": ["Ferrous sulfate", "Autrin", "Livogen"], "note": "If fatigue due to anemia. Take with Vitamin C for better absorption."},
+        {"name": "Vitamin B12", "brands": ["Methylcobalamin", "Neurobion", "Becosules"], "note": "B12 deficiency is common cause of fatigue in India."},
+        {"name": "Vitamin D3", "brands": ["Calcirol", "D-Rise", "Sunny D3"], "note": "Deficiency causes fatigue and weakness — very common."},
+        {"name": "Multivitamin", "brands": ["Supradyn", "Becosules", "Revital"], "note": "General nutritional support for fatigue."}
+      ]
+    },
+    "cold": {
+      "description": "Common viral infection of the upper respiratory tract causing runny nose, sneezing, and congestion.",
+      "common_causes": ["rhinovirus", "coronavirus variants", "RSV"],
+      "when_to_see_doctor": "Symptoms lasting more than 10 days, high fever, or severe sinus pain.",
+      "home_remedies": ["rest", "steam inhalation", "warm fluids", "saline nasal drops", "honey and ginger"],
+      "generic_medicines": [
+        {"name": "Cetirizine", "brands": ["Cetzine", "Alerid", "Zyrtec"], "note": "Antihistamine — reduces runny nose and sneezing."},
+        {"name": "Phenylephrine (Decongestant)", "brands": ["Nasivion", "Sinarest", "Coldact"], "note": "Relieves blocked nose."},
+        {"name": "Paracetamol + Phenylephrine + Cetirizine", "brands": ["Sinarest", "D-Cold Total", "Coldarin"], "note": "Combination tablet for multiple cold symptoms."},
+        {"name": "Saline nasal drops", "brands": ["Nasoclear", "Otrivin Saline", "Sterimar"], "note": "Safe for all ages — clears nasal passage naturally."}
+      ]
+    },
+    "rash": {
+      "description": "Change in skin color or texture, often appearing as red patches, bumps, or blisters.",
+      "common_causes": ["allergic reaction", "eczema", "contact dermatitis", "heat rash", "viral infection"],
+      "when_to_see_doctor": "Rash with fever, difficulty breathing, spreading rapidly, or signs of infection.",
+      "home_remedies": ["cool compress", "calamine lotion", "avoid scratching", "oatmeal bath", "antihistamines"],
+      "generic_medicines": [
+        {"name": "Cetirizine", "brands": ["Zyrtec", "Cetzine", "Alerid"], "note": "Antihistamine — reduces itching and allergic rash."},
+        {"name": "Calamine lotion", "brands": ["Lacto Calamine", "Calamine Lotion IP"], "note": "Apply topically — soothes itching and irritation."},
+        {"name": "Hydrocortisone cream (mild steroid)", "brands": ["Hydrocortisone cream", "Locoid"], "note": "For inflammatory rashes. Short-term use only."},
+        {"name": "Chlorpheniramine", "brands": ["Avil", "Chlortrimeton"], "note": "Antihistamine for allergic rash — causes drowsiness."}
+      ]
+    },
+    "dizziness": {
+      "description": "Feeling of lightheadedness, unsteadiness, or spinning sensation.",
+      "common_causes": ["dehydration", "low blood pressure", "anemia", "ear infection", "vertigo"],
+      "when_to_see_doctor": "Dizziness with chest pain, sudden severe headache, fainting, or vision changes.",
+      "home_remedies": ["sit or lie down immediately", "stay hydrated", "avoid sudden movements", "eat small regular meals"],
+      "generic_medicines": [
+        {"name": "Meclizine", "brands": ["Vertin", "Stugeron", "Marzine"], "note": "For vertigo and motion sickness related dizziness."},
+        {"name": "Betahistine", "brands": ["Vertin 16", "Betavert", "Vasograin"], "note": "Specifically for vertigo and inner ear problems."},
+        {"name": "ORS + Water", "brands": ["Electral", "Enerzal"], "note": "If dizziness is due to dehydration — rehydrate immediately."},
+        {"name": "Cinnarizine", "brands": ["Stugeron", "Vertinil"], "note": "Reduces vertigo and motion sickness symptoms."}
+      ]
+    },
+    "weakness": {
+      "description": "Lack of physical or muscular strength, feeling of tiredness in the body.",
+      "common_causes": ["infection", "anemia", "dehydration", "poor nutrition", "diabetes", "thyroid"],
+      "when_to_see_doctor": "Sudden severe weakness, weakness on one side of body, or weakness with chest pain.",
+      "home_remedies": ["rest", "nutritious food", "stay hydrated", "iron-rich foods if anemic"],
+      "generic_medicines": [
+        {"name": "Iron + Folic Acid", "brands": ["Ferrous sulfate", "Livogen", "Autrin"], "note": "For weakness due to anemia."},
+        {"name": "Vitamin B Complex", "brands": ["Neurobion", "Becosules", "Polybion"], "note": "Boosts energy and reduces weakness."},
+        {"name": "Vitamin D3", "brands": ["D-Rise", "Calcirol", "Sunny D3"], "note": "Deficiency is major cause of weakness in India."},
+        {"name": "ORS", "brands": ["Electral", "Enerzal"], "note": "If weakness due to dehydration or illness."}
+      ]
+    },
+    "chest pain": {
+      "description": "Pain or discomfort in the chest area. Can range from mild to severe and may indicate serious conditions.",
+      "common_causes": ["muscle strain", "acid reflux", "anxiety", "heart attack", "pneumonia"],
+      "when_to_see_doctor": "Any chest pain should be evaluated by a doctor immediately, especially with shortness of breath or sweating.",
+      "home_remedies": ["rest — if due to reflux try antacids, otherwise seek medical attention immediately"],
+      "generic_medicines": [
+        {"name": "Antacid (for acid reflux chest pain)", "brands": ["Digene", "Gelusil", "Eno"], "note": "ONLY if chest pain is clearly due to acidity. Seek doctor for any other type."},
+        {"name": "Pantoprazole", "brands": ["Pan 40", "Pantocid"], "note": "For GERD related chest discomfort — not for cardiac pain."},
+        {"name": "WARNING", "brands": [], "note": "Chest pain can be a medical emergency. Please consult a doctor immediately if unsure."}
+      ]
+    },
+    "back pain": {
+      "description": "Pain in the lower, middle, or upper back. Very common and often related to muscle strain.",
+      "common_causes": ["muscle strain", "poor posture", "disc herniation", "kidney issues", "osteoporosis"],
+      "when_to_see_doctor": "Back pain with numbness, weakness in legs, loss of bladder control, or after injury.",
+      "home_remedies": ["rest", "hot or cold compress", "gentle stretching", "over-the-counter pain relief"],
+      "generic_medicines": [
+        {"name": "Ibuprofen", "brands": ["Brufen", "Combiflam", "Advil"], "note": "NSAID — reduces inflammation and back pain. Take with food."},
+        {"name": "Diclofenac", "brands": ["Voveran", "Voltaren", "Diclofenac gel"], "note": "Apply gel topically or tablet form for back pain."},
+        {"name": "Muscle Relaxant — Thiocolchicoside", "brands": ["Myospaz", "Tizanidine", "Mobizox"], "note": "For muscle spasm related back pain — causes drowsiness."},
+        {"name": "Paracetamol", "brands": ["Crocin", "Dolo 650"], "note": "Milder option — first choice for simple back pain."}
+      ]
+    },
+    "vomiting": {
+      "description": "Forceful expulsion of stomach contents through the mouth.",
+      "common_causes": ["food poisoning", "gastroenteritis", "motion sickness", "pregnancy", "medications"],
+      "when_to_see_doctor": "Vomiting blood, vomiting lasting more than 24 hours, or with severe abdominal pain.",
+      "home_remedies": ["sip small amounts of water or ORS", "avoid solid food for a few hours", "ginger tea", "rest"],
+      "generic_medicines": [
+        {"name": "ORS (Oral Rehydration Salts)", "brands": ["Electral", "Pedialyte"], "note": "MOST IMPORTANT — prevents dehydration from vomiting."},
+        {"name": "Ondansetron", "brands": ["Emeset", "Zofer", "Ondem"], "note": "Strong anti-vomiting medicine. Works within 30 minutes."},
+        {"name": "Domperidone", "brands": ["Domstal", "Vomistop"], "note": "Mild anti-vomiting — good for mild to moderate vomiting."},
+        {"name": "Metoclopramide", "brands": ["Perinorm"], "note": "Helps settle stomach — reduces vomiting reflex."}
+      ]
+    }
+  },
+  "medicines": {
+    "paracetamol": {
+      "generic_name": "Acetaminophen / Paracetamol",
+      "brand_names": ["Crocin", "Dolo 650", "Tylenol", "Calpol"],
+      "uses": ["fever", "mild to moderate pain", "headache", "body ache"],
+      "dosage": "Adults: 500mg to 1000mg every 4 to 6 hours. Max 4g per day. Children: weight-based, consult doctor.",
+      "side_effects": ["rare at normal doses", "liver damage in overdose", "allergic reaction rare"],
+      "warnings": "Do not exceed recommended dose. Avoid alcohol. Caution in liver disease."
+    },
+    "ibuprofen": {
+      "generic_name": "Ibuprofen",
+      "brand_names": ["Brufen", "Advil", "Nurofen", "Combiflam"],
+      "uses": ["pain relief", "fever", "inflammation", "arthritis", "menstrual cramps", "back pain"],
+      "dosage": "Adults: 200mg to 400mg every 4 to 6 hours. Max 1200mg per day OTC. Take with food.",
+      "side_effects": ["stomach upset", "heartburn", "nausea", "dizziness", "stomach ulcers with long-term use"],
+      "warnings": "Avoid on empty stomach. Caution in kidney disease, heart disease, and pregnancy. Not for children under 6 months."
+    },
+    "amoxicillin": {
+      "generic_name": "Amoxicillin",
+      "brand_names": ["Mox", "Trimox", "Amoxil"],
+      "uses": ["bacterial infections", "ear infection", "strep throat", "pneumonia", "UTI"],
+      "dosage": "As prescribed by doctor. Typically 250mg to 500mg every 8 hours. Complete the full course.",
+      "side_effects": ["diarrhea", "rash", "nausea", "stomach upset", "allergic reaction"],
+      "warnings": "Antibiotic requires prescription. Do not stop early. Inform doctor of penicillin allergy."
+    },
+    "cetirizine": {
+      "generic_name": "Cetirizine",
+      "brand_names": ["Zyrtec", "Cetcip", "Alerid", "Cetzine"],
+      "uses": ["allergies", "hay fever", "hives", "itching", "runny nose", "cold", "rash"],
+      "dosage": "Adults: 10mg once daily. Children 6 to 12: 5mg twice daily.",
+      "side_effects": ["drowsiness", "dry mouth", "headache", "fatigue"],
+      "warnings": "May cause drowsiness, avoid driving. Avoid alcohol."
+    },
+    "omeprazole": {
+      "generic_name": "Omeprazole",
+      "brand_names": ["Omez", "Prilosec", "Losec"],
+      "uses": ["acid reflux", "GERD", "stomach ulcers", "heartburn"],
+      "dosage": "Adults: 20mg once daily before meals. Course typically 4 to 8 weeks.",
+      "side_effects": ["headache", "diarrhea", "nausea", "stomach pain"],
+      "warnings": "Long-term use may affect magnesium and B12 levels. Consult doctor before use."
+    },
+    "metformin": {
+      "generic_name": "Metformin",
+      "brand_names": ["Glucophage", "Glycomet", "Obimet"],
+      "uses": ["type 2 diabetes", "blood sugar control"],
+      "dosage": "As prescribed. Typically 500mg to 1000mg twice daily with meals.",
+      "side_effects": ["nausea", "diarrhea", "stomach upset usually temporary", "metallic taste"],
+      "warnings": "Requires prescription. Monitor kidney function. Do not crush extended-release tablets."
+    },
+    "azithromycin": {
+      "generic_name": "Azithromycin",
+      "brand_names": ["Zithromax", "Azithral", "Azee"],
+      "uses": ["bacterial infections", "chest infection", "skin infections", "ear infections"],
+      "dosage": "As prescribed. Commonly 500mg on day 1, then 250mg for 4 days.",
+      "side_effects": ["diarrhea", "nausea", "stomach pain", "headache"],
+      "warnings": "Antibiotic requires prescription. Not for viral infections. Can affect heart rhythm."
+    },
+    "aspirin": {
+      "generic_name": "Aspirin / Acetylsalicylic acid",
+      "brand_names": ["Disprin", "Ecosprin", "Aspro"],
+      "uses": ["pain relief", "fever", "anti-inflammatory", "blood thinner low dose"],
+      "dosage": "Pain or fever: 325mg to 650mg every 4 to 6 hours. Low-dose: 75mg to 100mg once daily as prescribed.",
+      "side_effects": ["stomach irritation", "bleeding risk", "tinnitus at high doses"],
+      "warnings": "Do NOT give to children under 16. Avoid if stomach ulcer. Inform surgeon about blood-thinning effects."
+    },
+    "domperidone": {
+      "generic_name": "Domperidone",
+      "brand_names": ["Domstal", "Vomistop", "Motilium"],
+      "uses": ["nausea", "vomiting", "bloating", "stomach discomfort"],
+      "dosage": "Adults: 10mg up to 3 times daily before meals. Max 30mg per day.",
+      "side_effects": ["dry mouth", "headache", "diarrhea", "rarely heart rhythm issues"],
+      "warnings": "Do not use long-term. Consult doctor if heart conditions exist."
+    },
+    "ondansetron": {
+      "generic_name": "Ondansetron",
+      "brand_names": ["Emeset", "Zofer", "Ondem"],
+      "uses": ["severe nausea", "vomiting", "post-chemotherapy nausea"],
+      "dosage": "Adults: 4mg to 8mg every 8 hours as needed.",
+      "side_effects": ["headache", "constipation", "fatigue", "dizziness"],
+      "warnings": "Consult doctor before use. Can affect heart rhythm in high doses."
+    },
+    "loperamide": {
+      "generic_name": "Loperamide",
+      "brand_names": ["Imodium", "Lopamide", "Eldoper"],
+      "uses": ["diarrhea", "traveller's diarrhea"],
+      "dosage": "Adults: 4mg initially then 2mg after each loose stool. Max 16mg per day.",
+      "side_effects": ["constipation", "stomach cramps", "dizziness", "nausea"],
+      "warnings": "Do not use if blood in stool or high fever. Not for children under 2 years."
+    },
+    "betahistine": {
+      "generic_name": "Betahistine",
+      "brand_names": ["Vertin", "Betavert", "Betaserc"],
+      "uses": ["vertigo", "dizziness", "Meniere's disease", "tinnitus"],
+      "dosage": "Adults: 8mg to 16mg three times daily with food.",
+      "side_effects": ["nausea", "stomach upset", "headache"],
+      "warnings": "Requires prescription. Caution in asthma and stomach ulcers."
+    },
+    "dolo 650": {
+      "generic_name": "Paracetamol 650mg",
+      "brand_names": ["Dolo 650"],
+      "uses": ["fever", "mild to moderate pain", "headache", "body ache"],
+      "dosage": "Adults: 1 tablet every 4 to 6 hours. Max 6 tablets per day.",
+      "side_effects": ["rare at normal doses", "liver damage in overdose"],
+      "warnings": "Do not exceed recommended dose. Avoid alcohol. Caution in liver disease."
+    },
+    "ors": {
+      "generic_name": "Oral Rehydration Salts",
+      "brand_names": ["Electral", "ORS", "Pedialyte", "Enerzal"],
+      "uses": ["dehydration", "diarrhea", "vomiting", "heat exhaustion", "weakness"],
+      "dosage": "Mix one sachet in 1 litre of clean water. Sip frequently throughout the day.",
+      "side_effects": ["none at normal use"],
+      "warnings": "Use clean water only. Do not add extra sugar or salt."
+    },
+    "pantoprazole": {
+      "generic_name": "Pantoprazole",
+      "brand_names": ["Pan 40", "Pantocid", "Protonix"],
+      "uses": ["acid reflux", "GERD", "stomach ulcers", "heartburn", "chest pain from acidity"],
+      "dosage": "Adults: 40mg once daily before breakfast.",
+      "side_effects": ["headache", "diarrhea", "nausea", "flatulence"],
+      "warnings": "Long-term use may affect bone density and magnesium levels."
+    },
+    "diclofenac": {
+      "generic_name": "Diclofenac",
+      "brand_names": ["Voveran", "Voltaren", "Diclomol"],
+      "uses": ["back pain", "joint pain", "inflammation", "muscle pain", "arthritis"],
+      "dosage": "Adults: 50mg two to three times daily with food. Gel: apply 2 to 4 times daily.",
+      "side_effects": ["stomach upset", "nausea", "headache", "skin irritation if gel"],
+      "warnings": "Take with food. Avoid in kidney/heart disease. Do not use long-term without doctor advice."
+    },
+    "ambroxol": {
+      "generic_name": "Ambroxol",
+      "brand_names": ["Ambrodil", "Mucosolvan", "Ambrolite"],
+      "uses": ["wet cough", "chest congestion", "mucus clearance"],
+      "dosage": "Adults: 30mg three times daily. Syrup or tablet both available.",
+      "side_effects": ["nausea", "diarrhea", "stomach upset"],
+      "warnings": "Drink plenty of water. Consult doctor if cough persists more than 3 weeks."
+    },
+    "levocetrizine": {
+      "generic_name": "Levocetirizine",
+      "brand_names": ["Xyzal", "Levocet", "L-Cet"],
+      "uses": ["allergies", "hay fever", "hives", "itching", "runny nose"],
+      "dosage": "Adults: 5mg once daily in the evening.",
+      "side_effects": ["drowsiness", "dry mouth", "headache", "fatigue"],
+      "warnings": "May cause drowsiness. Avoid driving. Avoid alcohol."
+    }
+  }
+}

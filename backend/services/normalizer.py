@@ -1,11 +1,21 @@
 import json, os
-from openai import AsyncOpenAI
-
-client = AsyncOpenAI(api_key=os.getenv("OPENAI_API_KEY"))
+from groq import AsyncGroq
+client = AsyncGroq(api_key=os.getenv("GROQ_API_KEY"))
 
 SYSTEM_PROMPT = """
-Convert user input into structured JSON.
-Return ONLY JSON:
+You are a medical language normalizer.
+Convert user input (Hindi/Hinglish/English) into structured JSON.
+
+IMPORTANT:
+- normalized_symptoms → ALWAYS translate to English 
+  (bukhar = fever, sir dard = headache, khansi = cough, pet dard = stomach pain)
+- normalized_medicines → ALWAYS translate to English generic name
+- language_detected → hinglish / hindi / english
+- raw_query_english → full message translated to English
+- is_document_query → true only if asking about uploaded file or report
+- document_keywords → English keywords if is_document_query is true
+
+Return ONLY valid JSON:
 {
   "normalized_symptoms": [],
   "normalized_medicines": [],
@@ -19,7 +29,7 @@ Return ONLY JSON:
 async def normalize_input(user_message: str):
     try:
         res = await client.chat.completions.create(
-            model="gpt-4o-mini",
+            model="llama-3.3-70b-versatile",
             messages=[
                 {"role": "system", "content": SYSTEM_PROMPT},
                 {"role": "user", "content": user_message}
@@ -27,7 +37,14 @@ async def normalize_input(user_message: str):
             temperature=0,
             response_format={"type": "json_object"}
         )
-        return json.loads(res.choices[0].message.content)
+        content = res.choices[0].message.content
+
+        # Empty response check — JSON crash nahi hoga
+        if not content or content.strip() == "":
+            print("[Normalizer] Empty response from OpenAI")
+            raise ValueError("Empty response from OpenAI")
+
+        return json.loads(content)
 
     except Exception as e:
         print(f"[Normalizer Error] {e}")
